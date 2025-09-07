@@ -1,5 +1,5 @@
 """
-SISTEMA DE RESERVAS DE HOTEL - VERSIÓN PRINCIPIANTE
+SISTEMA DE RESERVAS DE HOTEL 
 Alcance: solo reservas en septiembre (30 días).
 Anticipación mínima: 7 días.
 Se valida restando directamente números de día (sin librerías).
@@ -90,8 +90,7 @@ def main():
         total_str = "$" + str(int(prom)).rjust(10)
         print(tipo_str + "\t" + total_str)
         i += 1
-
-    # --- 6) Habitaciones sin reservas por tipo ---
+        
     # --- 6) Habitaciones sin reservas por tipo ---
     print("\n=== (6) Habitaciones sin reservas por tipo ===")
     for i in range(Sucursal):   # recorre los tipos de habitación
@@ -124,9 +123,6 @@ def main():
             if m[i][j] > 0:
                 total_reservas += 1
     print(f"\nNúmero total de reservas realizadas: {total_reservas}")
-
-
-
 
 def cargar_importes(matriz, TIPOS, PISOS, TARIFAS_BASE, COCHERA_VALOR, HABITACIONES, DIAS_SEPTIEMBRE, hoy_dia):
     """
@@ -252,6 +248,7 @@ def porcentaje_no_reservadas(matriz, cantidadFilas, cantidadColumnas):
 
 # Ejecutar
 main()
+
 
 
 
